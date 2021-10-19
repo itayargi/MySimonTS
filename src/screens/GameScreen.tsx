@@ -79,6 +79,7 @@ const GameScreen = (props: Props) => {
     }
     const onModalBtnPress=()=>{
         LevelUp()
+        setUserName("")
         navigation.navigate(screensName.ResultScreen)
     }
 

@@ -43,7 +43,7 @@ const SimonBtn = (props: Props) => {
     const [flashSimonBtn, setFlashSimonBtn] = useState('');
     const [pressNotAllowed, setPressNotAllow] = useState(true);
     const [simonOption, setSimonOption] = useState(initSimonState);
-    const userLevel = simonOption.stage.length
+    const userLevel = simonOption.stage.length - 1
 
     // get random choise of simon btn
     function getRandomBtn(options: any) {
@@ -144,7 +144,7 @@ const SimonBtn = (props: Props) => {
                 {renderSimonBtn(() => myPlay(greenSimon), styles.simonBtn, greenSimon.color)}
             </View>
             <View style={styles.circle} >
-                <Text>{userLevel - 1}</Text>
+                <Text>{userLevel}</Text>
             </View>
             <View style={styles.row}>
                 {renderSimonBtn(() => myPlay(blueSimon), [styles.simonBtnRotate, { transform: [{ rotate: '180deg' }] }], blueSimon.color)}
