@@ -17,8 +17,6 @@ const ResultScreen = (props: Props) => {
     return (
         <View style={styles.container}>
             <Text>result screen</Text>
-            <Text>press the btn to navigate to game screen</Text>
-
             <Button title="Game Screen" onPress={navigateGameScreen} />
         </View>
     )
