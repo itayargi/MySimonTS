@@ -13,14 +13,21 @@ interface Props {
     showModal:boolean;
     status:string;
     onChange:(val:any)=>void
+    closeModal:()=>void
+    onPress:()=>void
 }
 
 const ModalScreen = (props:Props) => {
-    const {name, showModal, status, onChange} = props
+    const {name, showModal, status, onChange,closeModal,onPress} = props
 
   // navigate to result screen with player's name
   const navigateWithProps = (name:any) => {
-   
+    if (name == '') {
+        Alert.alert('Please enter a name');
+        return;
+      }
+      onPress()
+      closeModal()
   };
   return (
     <Modal animationType="slide" transparent={true} visible={showModal}>

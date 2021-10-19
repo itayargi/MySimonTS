@@ -1,4 +1,4 @@
-import { RootStackParamList } from '../../../../App';
+import { RootStackParamList } from '../../../App';
 
 type ScreenName ={
    GameScreen:keyof RootStackParamList
